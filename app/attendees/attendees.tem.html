@@ -1,0 +1,31 @@
+<section class="mainbar" data-ng-controller="attendees as vm">
+	<section class="matter">
+		<div class="container-fluid">
+			<div class="row-fluid">
+				<!-- widget start: -->
+				<div class="widget wblue">
+					<!-- widget header: -->
+					<div data-cc-widget-header title="{{vm.title}}"
+					     subtitle="{{vm.attendees.length}}"></div>
+					<!-- widget body: -->
+					<div class="widget-content user">
+						<!-- ng-repeat begins here: -->
+						<div class="padd list-flow" data-ng-repeat="a in vm.attendees">
+							<div class="user">
+								<img data-cc-img-person="{{ a.imageSource }}"
+								     class="img-polaroid stacked">
+								<div class="name-stack">
+									<h5><small>{{ a.firstName }} {{ a.lastName }}</small></h5>
+									<h5><small>age: {{ a.age }}</small></h5>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="widget-foot">
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</section>
