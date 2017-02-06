@@ -7,14 +7,19 @@
 
     var controllerId = 'speakers';
 
-    angular.module('app').controller(controllerId, ['common', 'datacontext', SpeakersClass]);
+    angular.module('app').controller(controllerId, ['common', 'config', 'datacontext', SpeakersClass]);
 
-    function SpeakersClass(common, datacontext) {
+    function SpeakersClass(common, config, datacontext) {
         var vm = this,
             getLogFn = common.logger.getLogFn,
-            log = getLogFn(controllerId);
+            log = getLogFn(controllerId),
+            keyCodes = config.keyCodes;
 
         vm.title = 'Speakers';
+        vm.filteredSpeakers = [];
+        vm.speakerInput = '';
+        vm.speakerSearch = '';
+        vm.search = searchFn;
         vm.speakers = [];
 
         activate();
@@ -27,10 +32,29 @@
                 }
             );
         }
+        
+        function searchFn($event) {
+            if($event.keyCode === keyCodes.esc) {
+                vm.speakerSearch = '';
+            }
+            applyFilter();
+        }
+
+        function applyFilter() {
+            vm.filteredSpeakers = vm.speakers.filter(speakerFilter);
+        }
+
+        function speakerFilter(speaker) {
+            var fullname = (speaker.firstName+" "+speaker.lastName);
+            return vm.speakerSearch ?
+                common.textContains(fullname, vm.speakerSearch) : true;
+        }
 
         function getSpeakers() {
             return datacontext.getSpeakerPartials().then(function (data) {
                 vm.speakers = data;
+                applyFilter();
+                return vm.speakers;
             })
         }
         // #endregion
