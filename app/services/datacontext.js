@@ -94,7 +94,7 @@
                         code: 'cedr1',
                         tagsFormatted: '#javascript #typescript #node #es6',
                         title: 'Guru'
-                    }, { // -- 1st data -- \\
+                    },  { // -- 1st data -- \\
                         speaker: {
                             imageSource: 'dave_ward.jpg',
                             fullName: 'Marcus Aurelius'
@@ -146,7 +146,7 @@
 
             console.log("jha - forceRemote = "+forceRemote, " _areSessionsLoaded = "+_areSessionsLoaded());
             if (_areSessionsLoaded() && !forceRemote) {
-                // console.log("jha - forcing a remote call");
+                console.log("jha - forcing a remote call");
                 sessionsData = _getAllLocal(entityNames.session, orderBy);
                 return $q.when(sessionsData);
             }
@@ -174,7 +174,7 @@
         }
 
         function prime() {
-            // console.log("jha - prime invoked.");
+            console.log("jha - prime invoked.");
             if (primePromise) return primePromise;
 
             // since I'm not pulling from a real db I just return an empty array.

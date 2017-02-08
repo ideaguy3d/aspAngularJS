@@ -1,26 +1,16 @@
 ﻿<div data-cc-sidebar data-ng-controller="sidebar as vm">
-	<div class="sidebar-filler"></div>
-	<h4 class="text-center"><strong>CEDR Systems</strong></h4>
-	<div class="sidebar-dropdown"><a href="#">Menu</a></div>
-	<div class="sidebar-inner">
-		<div class="sidebar-widget">
-			<form class="form-inline">
-				<div class="input-append row-fluid">
-					<input type="text" class="span8" data-ng-model="vm.searchText"
-					       data-ng-keyup="vm.search($event)"
-					       placeholder="Find a session...">
-					<a class="btn btn-info btn-notext" data-ng-click="vm.search($event)">
-						<i class="icon-search"></i>
-					</a>
-				</div>
-			</form>
-		</div>
-		
-		<ul class="navi">
-			<li class="nlightblue fade-selection-animation" data-ng-class="vm.isCurrent(r)"
-			    data-ng-repeat="r in vm.navRoutes">
-				<a href="#{{r.url}}" data-ng-bind-html="r.config.settings.content"></a>
-			</li>
-		</ul>
-	</div>
+    <div class="sidebar-filler"></div>
+    <h4 class="text-center">WILlIAMS ACT</h4>
+    <div class="sidebar-dropdown"><a href="#">Menu</a></div>
+    <div class="sidebar-inner">
+        <div class="sidebar-widget">
+        </div>
+
+        <ul class="navi">
+            <li class="nlightblue fade-selection-animation" data-ng-class="vm.isCurrent(r)"
+                data-ng-repeat="r in vm.navRoutes">
+                <a href="#{{r.url}}" data-ng-bind-html="r.config.settings.content"></a>
+            </li>
+        </ul>
+    </div>
 </div>
