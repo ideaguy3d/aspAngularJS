@@ -21,7 +21,7 @@
 
         // Bindable properties and functions are placed on vm.
         vm.sessions = [];
-        vm.title = 'Sessions';
+        vm.title = 'Application Manager';
         vm.refresh = refresh;
         
         activate();

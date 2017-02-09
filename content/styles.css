@@ -8,15 +8,15 @@ body {
 }
 
 .navbar-inverse .btn-navbar.active {
-    background-color: #333 \9;
+    background-color: #F7F7F7 \9;
 }
 
 .navbar-inner {
-    background-color: #333 !important;
+    background-color: #fff !important;
 }
 
 .sidebar .navi > li > a {
-    background-color: #333 !important;
+    background-color: #F7F7F7 !important;
 }
 
 .sidebar .navi li ul li a {
@@ -24,7 +24,7 @@ body {
 }
 
     .sidebar .navi li ul li a:hover {
-        color: #52b9e9;
+        color: #2d5a8c;
     }
 
     .sidebar .navi li ul li a:disabled {
@@ -32,11 +32,11 @@ body {
     }
 
 .navbar-inverse .btn-navbar {
-    background-color: #333;
+    background-color:#F7F7F7;
 }
 
     .navbar-inverse .btn-navbar:hover {
-        background-color: #333;
+        background-color: #F7F7F7;
     }
 
 .sidebar {
@@ -44,7 +44,7 @@ body {
 }
 
     .sidebar .sidebar-inner {
-        background-color: #333;
+        background-color: #F7F7F7;
     }
 
 .sidebar-filler {
@@ -53,7 +53,7 @@ body {
     top: 0;
     left: 0;
     height: 100%;
-    background-color: #333;
+    background-color: #F7F7F7;
     width: 230px;
 }
 

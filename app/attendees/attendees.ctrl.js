@@ -16,7 +16,7 @@
             log = getLogFn(ctrlId);
         
         // view model bindings
-        vm.title = 'Attendees';
+        vm.title = 'Application Manager';
         vm.attendees = [];
 
         activate();

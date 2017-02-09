@@ -67,24 +67,24 @@
     // Define the routes 
     function getRoutes() {
         return [
-            {
-                url: '/',
-                config: {
-                    templateUrl: 'app/dashboard/dashboard.html',
-                    title: 'dashboard',
-                    settings: {
-                        nav: 2,
-                        content: '<i class="icon-dashboard"></i> Dashboard'
-                    }
-                }
-            }, {
+             {
                 url: '/admin',
                 config: {
                     title: 'admin',
                     templateUrl: 'app/admin/admin.html',
                     settings: {
                         nav: 1,
-                        content: '<i class="icon-lock"></i> Admin'
+                        content: '<i class="icon-lock"></i> District Progress'
+                    }
+                }
+            }, {
+                url: '/',
+                config: {
+                    templateUrl: 'app/dashboard/dashboard.html',
+                    title: 'dashboard',
+                    settings: {
+                        nav: 2,
+                        content: '<i class="icon-dashboard"></i> Site Visits'
                     }
                 }
             }, {
@@ -94,7 +94,7 @@
                     templateUrl: 'app/sessions/sessions.tem.html',
                     settings: {
                         nav: 3,
-                        content: '<i class="icon-calendar"></i> District Progress'
+                        content: '<i class="icon-calendar"></i> People'
                     }
                 }
             }, {
@@ -104,17 +104,7 @@
                     templateUrl: 'app/speakers/speakers.tem.html',
                     settings: {
                         nav: 4,
-                        content: '<i class="icon-user"></i> Site Visits'
-                    }
-                }
-            }, {
-                url: '/attendees',
-                config: {
-                    title: 'attendees',
-                    templateUrl: 'app/attendees/attendees.tem.html',
-                    settings: {
-                        nav: 5,
-                        content: '<i class="icon-group"></i> People'
+                        content: '<i class="icon-user"></i> IM'
                     }
                 }
             }

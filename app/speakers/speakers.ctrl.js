@@ -15,7 +15,7 @@
             log = getLogFn(controllerId),
             keyCodes = config.keyCodes;
 
-        vm.title = 'Speakers';
+        vm.title = 'Application Manager';
         vm.filteredSpeakers = [];
         vm.speakerInput = '';
         vm.speakerSearch = '';

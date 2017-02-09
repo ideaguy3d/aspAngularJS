@@ -518,7 +518,7 @@ form {
 
     .navbar .nav > li > a {
         font-size: 13px !important;
-        color: #fff !important;
+        color: #2d5a8c !important;
     }
 
     .navbar i {
@@ -526,8 +526,8 @@ form {
     }
 
     .navbar .caret {
-        border-top-color: #fff !important;
-        border-bottom-color: #fff !important;
+        border-top-color: #2d5a8c !important;
+        border-bottom-color: #2d5a8c !important;
     }
 
     .navbar .nav-user-pic {
@@ -546,8 +546,8 @@ form {
     width: 230px;
     float: left;
     display: block;
-    background: #111;
-    color: #eee;
+    background: #fff;
+    color: #2d5a8c;
     position: relative;
 }
 
@@ -571,7 +571,7 @@ form {
         margin: 0 auto;
         position: absolute;
         z-index: 60;
-        background: #111;
+        background: #F7F7F7;
     }
 
     .sidebar .navi li i {
@@ -587,21 +587,21 @@ form {
         padding: 12px 20px;
         font-size: 15px;
         line-height: 25px;
-        color: #fff;
+        color: #2d5a8c;
         text-decoration: none;
-        border-bottom: 1px solid #222;
-        background-color: #111;
+        /*border-bottom: 1px solid #222;*/
+        background-color: #F7F7F7;
     }
 
         .sidebar .navi > li > a:hover, .sidebar .navi > li.open > a {
-            border-bottom: 1px solid #222;
+            /*border-bottom: 1px solid #222;*/
             background-color: #222;
             color: #fff;
         }
 
     .sidebar .navi li ul {
         display: none;
-        background: #181818;
+        background: #F7F7F7;
     }
 
     .sidebar .navi li.open ul {
