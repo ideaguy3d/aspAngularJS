@@ -25,35 +25,24 @@
     </script>
 
     <link href="content/ie10mobile.css" rel="stylesheet"/>
-    <!--<link href="content/bootstrap.min.css" rel="stylesheet"/>-->
+    <link href="content/bootstrap.min.css" rel="stylesheet"/>
     <link href="content/font-awesome.min.css" rel="stylesheet"/>
     <link href="content/toastr.css" rel="stylesheet"/>
     <link href="content/customtheme.css" rel="stylesheet">
     <link href="content/bootstrap-responsive.min.css" rel="stylesheet"/>
     <link href="content/styles.css" rel="stylesheet"/>
-
-    <!-- williams ui design code -->
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/custom.css" rel="stylesheet">
-
     <!--<link href="content/breeze.directives.css" rel="stylesheet" />-->
 </head>
 
 
-<body data-ng-controller="CoreCtrl as coreCtrl">
+<body>
 <div>
-    <!-- <h1>{{ coreCtrl.coreCtrlMessage }}</h1> -->
-
-    <div ng-if="!coreCtrl.ccIsLoggedIn" data-ng-include="'/app/login/login.tem.html'"></div>
-    <div ng-if="coreCtrl.ccIsLoggedIn"  data-ng-include="'/app/layout/shell.html'"></div>
-
+    <div data-ng-include="'/app/layout/shell.html'"></div>
     <div id="splash-page" data-ng-show="false">
-        <!-- loading page -->
         <div class="page-splash">
             <div class="page-splash-message">
                 CEDR Systems Hot Towel Angular
             </div>
-
             <div class="progress progress-striped active page-progress-bar">
                 <div class="bar"></div>
             </div>
@@ -100,7 +89,6 @@
 <script src="app/common/bootstrap/bootstrap.dialog.js"></script>
 
 <!-- app, the application files. -->
-<script src="app/core/core.ctrl.js"></script>
 <script src="app/admin/admin.js"></script>
 <script src="app/dashboard/dashboard.js"></script>
 <script src="app/layout/shell.js"></script>

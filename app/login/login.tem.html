@@ -1,10 +1,87 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<!-- Fixed navbar -->
+<nav id="mainMenu" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><img src="Images/WilliamsLogo.png" width="262" height="26" alt=""/></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
 
-</body>
-</html>
+            <ul class="nav navbar-nav navbar-right">
+
+                <li style="padding-right:15px;">
+                    <select class="yearDrop">
+                        <option>1997-1998</option>
+                        <option>1999-2000</option>
+                        <option>2001-2002</option>
+                    </select>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">Welcome joshm<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#"><i class="fa fa-cog" aria-hidden="true"></i>
+                                Settings</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-sign-out" aria-hidden="true"></i>
+                                Log Off</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
+
+
+<div class="container mainContainer" style="clear:both;">
+    <div class="col-xs-12" id="logInBG">
+        <div class="row">
+            <div id="logIn" class="col-xs-6 col-xs-offset-3" style="margin-top:70px;">
+                <form class="form-inline" style="padding-bottom:10px;">
+                    <div class="col-xs-6">
+                        <div class="row">
+
+                            <label class="whiteText" for="exampleInputName2">Name</label><br>
+                            <input type="text" class="form-control" style="width:95%;margin-right:7px;"
+                                   id="exampleInputName2" placeholder="Jane Doe">
+                        </div>
+                    </div>
+
+                    <div class="col-xs-6">
+                        <div class="row">
+                            <label class="whiteText" for="exampleInputEmail2">Email</label><br>
+                            <input type="email" class="form-control" style="margin-left:7px;width:95%;"
+                                   id="exampleInputEmail2" placeholder="jane.doe@example.com">
+                        </div>
+                    </div>
+                </form>
+                <div class="col-xs-12" style="margin-top:15px;">
+                    <div class="row">
+                        <button ng-click="coreCtrl.ccLogInFn()" type="submit" class="btn  btn-orange " style="width:100%;">Log In</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xs-12" style="padding-top:15px;">
+        <div class="row">
+            Please enter your username and password.
+
+            If you don't have a username and password, please contact your school district's Williams Coordinator.
+        </div>
+    </div>
+
+
+</div>
+
