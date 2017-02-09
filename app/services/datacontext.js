@@ -54,10 +54,10 @@
 
         function getSpeakerPartials() {
             var speakersData = [
-                {firstName: 'Dave', lastName: 'Ward', imageSource: 'dave_ward.jpg'},
-                {firstName: 'Bred', lastName: 'Green', imageSource: 'brad_green.jpg'},
-                {firstName: 'John', lastName: 'Papa', imageSource: 'john_papa.jpg'},
-                {firstName: 'Julius', lastName: 'Alvarado', imageSource: 'julius_alvarado.jpg'}
+                { firstName: 'Dave', lastName: 'Ward', imageSource: 'dave_ward.jpg' },
+                { firstName: 'Bred', lastName: 'Green', imageSource: 'brad_green.jpg' },
+                { firstName: 'John', lastName: 'Papa', imageSource: 'john_papa.jpg' },
+                { firstName: 'Julius', lastName: 'Alvarado', imageSource: 'julius_alvarado.jpg' }
             ];
 
             return $q.when(speakersData);
@@ -69,13 +69,13 @@
 
         function getPeople() {
             var people = [
-                {firstName: 'John', lastName: 'Papa', age: 25, location: 'Florida'},
-                {firstName: 'Ward', lastName: 'Bell', age: 31, location: 'California'},
-                {firstName: 'Colleen', lastName: 'Jones', age: 21, location: 'New York'},
-                {firstName: 'Madelyn', lastName: 'Green', age: 18, location: 'North Dakota'},
-                {firstName: 'Ella', lastName: 'Jobs', age: 18, location: 'South Dakota'},
-                {firstName: 'Landon', lastName: 'Gates', age: 11, location: 'South Carolina'},
-                {firstName: 'Haley', lastName: 'Guthrie', age: 35, location: 'Wyoming'}
+                { firstName: 'John', lastName: 'Papa', age: 25, location: 'Florida' },
+                { firstName: 'Ward', lastName: 'Bell', age: 31, location: 'California' },
+                { firstName: 'Colleen', lastName: 'Jones', age: 21, location: 'New York' },
+                { firstName: 'Madelyn', lastName: 'Green', age: 18, location: 'North Dakota' },
+                { firstName: 'Ella', lastName: 'Jobs', age: 18, location: 'South Dakota' },
+                { firstName: 'Landon', lastName: 'Gates', age: 11, location: 'South Carolina' },
+                { firstName: 'Haley', lastName: 'Guthrie', age: 35, location: 'Wyoming' }
             ];
 
             return $q.when(people);
@@ -88,7 +88,7 @@
                             imageSource: 'julius_alvarado.jpg',
                             fullName: 'Julius Alvarado'
                         },
-                        room: {name: 'Room: Ninja-1z'},
+                        room: { name: 'Room: Ninja-1z' },
                         level: 5,
                         track: { name: 'JavaScript' },
                         code: 'cedr1',
@@ -101,7 +101,7 @@
                         },
                         room: {name: 'Room: Ninja-1a'},
                         level: 3,
-                        track: {name: 'JavaScript'},
+                        track: { name: 'JavaScript' },
                         code: 'cedr1',
                         tagsFormatted: '#javascript #typescript #node #es6',
                         title: 'Guru'

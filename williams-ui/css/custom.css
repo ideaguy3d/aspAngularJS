@@ -1,0 +1,181 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.shadow{
+-webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.24);
+-moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.24);
+box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.24);
+}
+
+
+
+
+.navbar-default {
+    background-color: #fff;
+    border-color: #e7e7e7;
+}
+
+body {
+	background-color: #F7F7F7;
+}
+.yearDrop {
+	margin-top:15px;
+}
+
+.mainContainer {
+	margin-top:65px;
+	margin-bottom: 50px;
+	background: #fff;
+	padding:15px;
+	border: 1px solid #e7e7e7;
+	
+	border-radius: 5px; 
+-moz-border-radius: 5px; 
+-webkit-border-radius: 5px; 
+	
+}
+
+.fa-blue {
+	color: #337ab7;
+}
+
+.btn-green {
+	background-color: #33b841;
+	color:#fff;
+	cursor: default;
+}
+
+.btn-green:hover, .btn-green:focus, .btn-green:active {
+	background-color: #33b841;
+	color:#fff;
+	box-shadow:none;
+	cursor: default;
+}
+
+.btn-orange {
+	background-color: #DD8A3E;
+	color:#fff;
+	
+}
+
+.btn-orange:hover {
+	background-color: #BF7637;
+	color:#fff;
+	
+}
+
+.noNew {
+	background-color: #F0F0F0;
+	color:#C4C4C4;
+	cursor: default;
+}
+.noNew:hover, .noNew:active, .noNew:focus {
+	background-color: #F0F0F0;
+	color:#C4C4C4;
+	cursor: default;
+	box-shadow:none;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 175px;
+}
+.footer {
+	margin-top:25px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 175px;
+	
+  background-color: #E5E5E5;
+}
+
+#ft_about {
+	float:left;
+	padding-right: 15px;
+	text-align:left;
+	width:300px;
+}
+
+#ft_contact {
+	border-left: 1px solid rgba(127, 140, 141, 0.5);
+	border-right: 1px solid rgba(127, 140, 141, 0.5);
+	float:left;
+	min-height: 270px;
+	padding: 0 40px;
+	text-align: left;
+	width:250px;
+}
+
+#ft_sites {
+	float:left;
+	padding-left: 30px;
+	text-align:left;
+	width: 230px;
+}
+
+.mainContainer {
+	min-width: 1138px;
+}
+
+.navbar-fixed-top {
+	min-width: 1138px;
+}
+
+#logInBG {
+	width:100%;
+	height: 300px;
+	background: url('../images/books2.jpg');
+	background-size: cover; 
+	background-repeat: no-repeat;
+}
+
+#logIn {
+	background-color: rgba(0, 0, 0, 0.4);border-radius: 5px;
+	padding:15px;
+}
+
+.whiteText {
+	color:#fff;
+}
+
+.btn-current {
+	background: #000;
+}
+
+.btn-current:hover {
+	background: #000;
+}
+
+.panelTitle {
+	padding-top:0;
+	margin-left:-5px;
+	margin-top:10px;
+}
+
+.tableMargin {
+	margin-bottom:0;
+}
+
+.contactCont {
+	margin-bottom:15px;
+}
+
+.footerHeading {
+	margin-top:0;
+}
+
+.footContainer {
+	padding:25px;
+}
+
+.footGap {
+	width:100%;
+	height: 20px; 
+	background: #F7F7F7;
+}
