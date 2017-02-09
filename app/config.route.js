@@ -73,7 +73,7 @@
                     templateUrl: 'app/dashboard/dashboard.html',
                     title: 'dashboard',
                     settings: {
-                        nav: 1,
+                        nav: 2,
                         content: '<i class="icon-dashboard"></i> Dashboard'
                     }
                 }
@@ -83,7 +83,7 @@
                     title: 'admin',
                     templateUrl: 'app/admin/admin.html',
                     settings: {
-                        nav: 2,
+                        nav: 1,
                         content: '<i class="icon-lock"></i> Admin'
                     }
                 }
@@ -94,7 +94,7 @@
                     templateUrl: 'app/sessions/sessions.tem.html',
                     settings: {
                         nav: 3,
-                        content: '<i class="icon-calendar"></i> Sessions'
+                        content: '<i class="icon-calendar"></i> District Progress'
                     }
                 }
             }, {
@@ -104,7 +104,7 @@
                     templateUrl: 'app/speakers/speakers.tem.html',
                     settings: {
                         nav: 4,
-                        content: '<i class="icon-user"></i> Speakers'
+                        content: '<i class="icon-user"></i> Site Visits'
                     }
                 }
             }, {
@@ -114,7 +114,7 @@
                     templateUrl: 'app/attendees/attendees.tem.html',
                     settings: {
                         nav: 5,
-                        content: '<i class="icon-group"></i> Attendees'
+                        content: '<i class="icon-group"></i> People'
                     }
                 }
             }
