@@ -26,7 +26,7 @@
     };
 
     // For use with the HotTowel-Angular-Breeze add-on that uses Breeze
-    var remoteServiceName = 'breeze/Breeze';
+    var remoteServiceName = 'api/controller';
 
     var imageSettings = {
         imageBasePath: '../content/images/photos/',
@@ -39,7 +39,7 @@
     };
 
     var config = {
-        appErrorPrefix: '[HT Error] ', //Configure the exceptionHandler decorator
+        appErrorPrefix: '[CEDR Error] ', //Configure the exceptionHandler decorator
         docTitle: 'CEDR Systems: ',
         events: events,
         remoteServiceName: remoteServiceName,

@@ -46,6 +46,7 @@
             // $routeProvider.when(r.url, r.config);
             setRoute(r.url, r.config);
         });
+
         $routeProvider.otherwise( { redirectTo: '/' } );
         
         function setRoute(url, definition) {
@@ -68,17 +69,17 @@
     function getRoutes() {
         return [
              {
-                url: '/admin',
+                url: '/',
                 config: {
-                    title: 'admin',
-                    templateUrl: 'app/admin/admin.html',
+                    title: 'district-progress',
+                    templateUrl: 'app/district-progress/district.progress.tem.html',
                     settings: {
                         nav: 1,
                         content: '<i class="icon-lock"></i> District Progress'
                     }
                 }
             }, {
-                url: '/',
+                url: '/dashboard',
                 config: {
                     templateUrl: 'app/dashboard/dashboard.html',
                     title: 'dashboard',
