@@ -23,7 +23,7 @@
                     }
                 }
             ),
-            login: $resource(jAppSettings.localPath + 'Token', null,
+            login: $resource(jAppSettings.cloudPath + 'Token', null,
                 {
                     'loginUser': {
                         method: 'POST',
@@ -40,7 +40,7 @@
                     }
                 }
             ),
-            logout: $resource(jAppSettings.localPath + 'api/Account/Logout', null,
+            logout: $resource(jAppSettings.cloudPath + 'api/Account/Logout', null,
                 {
                     'logoutUser': {
                         method: 'POST'
