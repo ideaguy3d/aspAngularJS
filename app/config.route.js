@@ -75,7 +75,7 @@
                     templateUrl: 'app/district-progress/district.progress.tem.html',
                     settings: {
                         nav: 1,
-                        content: '<i class="icon-lock"></i> District Progress'
+                        content: '<i class="icon-dashboard"></i> District Progress'
                     }
                 }
             }, {
@@ -85,7 +85,7 @@
                     title: 'dashboard',
                     settings: {
                         nav: 2,
-                        content: '<i class="icon-dashboard"></i> Site Visits'
+                        content: '<i class="icon-truck"></i> Site Visits'
                     }
                 }
             }, {
@@ -95,7 +95,7 @@
                     templateUrl: 'app/sessions/sessions.tem.html',
                     settings: {
                         nav: 3,
-                        content: '<i class="icon-calendar"></i> People'
+                        content: '<i class="icon-user"></i> People'
                     }
                 }
             }, {
@@ -105,7 +105,7 @@
                     templateUrl: 'app/speakers/speakers.tem.html',
                     settings: {
                         nav: 4,
-                        content: '<i class="icon-user"></i> IM'
+                        content: '<i class="icon-book"></i> IM'
                     }
                 }
             }

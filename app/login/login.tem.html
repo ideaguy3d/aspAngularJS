@@ -1,4 +1,4 @@
-<!-- Fixed navbar -->
+<!-- Fixed navbar
 <nav id="mainMenu" class="navbar navbar-default navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
@@ -12,9 +12,7 @@
             <a class="navbar-brand" href="#"><img src="Images/WilliamsLogo.png" width="262" height="26" alt=""/></a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-
             <ul class="nav navbar-nav navbar-right">
-
                 <li style="padding-right:15px;">
                     <select class="yearDrop">
                         <option>1997-1998</option>
@@ -39,36 +37,48 @@
                     </ul>
                 </li>
             </ul>
-        </div><!--/.nav-collapse -->
+        </div>
     </div>
 </nav>
-
+-->
 
 <div class="container mainContainer" style="clear:both;">
     <div class="col-xs-12" id="logInBG">
         <div class="row">
             <div id="logIn" class="col-xs-6 col-xs-offset-3" style="margin-top:70px;">
+                <!-- form begins here: -->
                 <form class="form-inline" style="padding-bottom:10px;">
                     <div class="col-xs-6">
                         <div class="row">
-
                             <label class="whiteText" for="exampleInputName2">Name</label><br>
-                            <input type="text" class="form-control" style="width:95%;margin-right:7px;"
-                                   id="exampleInputName2" placeholder="Jane Doe">
+                            <input type="email" class="form-control" style="width:95%;margin-right:7px;"
+                                   id="exampleInputName2" placeholder="jane.doe@example.com"
+                                   ng-model="coreCtrl.userData.email">
                         </div>
                     </div>
 
                     <div class="col-xs-6">
                         <div class="row">
                             <label class="whiteText" for="exampleInputEmail2">Email</label><br>
-                            <input type="email" class="form-control" style="margin-left:7px;width:95%;"
-                                   id="exampleInputEmail2" placeholder="jane.doe@example.com">
+                            <input type="password" class="form-control" style="margin-left:7px;width:95%;"
+                                   id="exampleInputEmail2" placeholder="password"
+                                   ng-model="coreCtrl.userData.password">
                         </div>
                     </div>
                 </form>
+
+                <!-- the "Login In" button -->
                 <div class="col-xs-12" style="margin-top:15px;">
                     <div class="row">
-                        <button ng-click="coreCtrl.ccLogInFn()" type="submit" class="btn  btn-orange " style="width:100%;">Log In</button>
+                        <button ng-click="coreCtrl.ccLoginFn()" type="submit" class="btn  btn-orange"
+                                style="width:100%;">Log In
+                        </button>
+                        <!--
+                        <p class="text-center"><strong>or</strong></p>
+                        <button ng-click="coreCtrl.ccRegisterFn()" type="submit" class="btn  btn-orange"
+                                style="width:100%;">Register
+                        </button>
+                         -->
                     </div>
                 </div>
             </div>
@@ -77,9 +87,14 @@
 
     <div class="col-xs-12" style="padding-top:15px;">
         <div class="row">
-            Please enter your username and password.
-
-            If you don't have a username and password, please contact your school district's Williams Coordinator.
+            <h2 ng-if="coreCtrl.loginError">{{ coreCtrl.loginError }}</h2>
+            <p>
+                Please enter your username and password. If you don't have a username and password, please contact your
+                school district's Williams Coordinator.
+            </p>
+            <p>
+                <small>1st attempt at auth ~JuliusA</small>
+            </p>
         </div>
     </div>
 </div>

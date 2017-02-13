@@ -41,7 +41,6 @@
 </head>
 
 
-
 <body data-ng-controller="CoreCtrl as coreCtrl">
 <nav id="mainMenu" class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -56,7 +55,6 @@
             <a class="navbar-brand" href="#"><img src="Images/WilliamsLogo.png" width="262" height="26" alt=""/></a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-
             <ul class="nav navbar-nav navbar-right">
                 <li style="padding-right:15px;">
                     <select class="yearDrop">
@@ -65,18 +63,21 @@
                         <option>2001-2002</option>
                     </select>
                 </li>
-                <li class="dropdown">
+                <!-- welcome "username" & settings area: -->
+                <li class="dropdown" ng-if="coreCtrl.userData.username">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                            aria-haspopup="true"
-                            aria-expanded="false">
-                        Welcome joshm<span class="caret"></span>
+                       aria-haspopup="true"
+                       aria-expanded="false">
+                        Welcome {{ coreCtrl.userData.get_username() }}<span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu">
                         <li>
                             <a href="#"><i class="fa fa-cog" aria-hidden="true"></i>Settings</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-sign-out" aria-hidden="true"></i>Log Off</a>
+                            <a href="" ng-click="coreCtrl.ccLogoutFn()">
+                                <i class="fa fa-sign-out" aria-hidden="true"></i>Log Off
+                            </a>
                         </li>
 
                     </ul>
@@ -87,8 +88,8 @@
 </nav>
 <div>
     <!-- <h1>{{ coreCtrl.coreCtrlMessage }}</h1> -->
-    <div ng-if="!coreCtrl.ccIsLoggedIn" data-ng-include="'/app/login/login.tem.html'"></div>
-    <div ng-if="coreCtrl.ccIsLoggedIn" data-ng-include="'/app/layout/shell.html'"></div>
+    <div ng-if="!coreCtrl.ccIsLoggedIn()" data-ng-include="'/app/login/login.tem.html'"></div>
+    <div ng-if="coreCtrl.ccIsLoggedIn()" data-ng-include="'/app/layout/shell.html'"></div>
 
     <div id="splash-page" data-ng-show="false">
         <!-- loading page -->
@@ -109,12 +110,14 @@
 <!-- Vendor Scripts -->
 <script src="scripts/jquery-2.0.3.js"></script>
 <!-- angular -->
-<script src="scripts/angular.js"></script>
-<script src="scripts/angular-animate.js"></script>
-<script src="scripts/angular-route.js"></script>
-<script src="scripts/angular-sanitize.js"></script>
-<script src="scripts/ui-bootstrap-tpls-0.6.0.js"></script>
+<script src="scripts/angular.min.js"></script>
+<script src="scripts/angular-animate.min.js"></script>
+<script src="scripts/angular-route.min.js"></script>
+<script src="scripts/angular-resource.min.js"></script>
+<script src="scripts/angular-sanitize.min.js"></script>
+
 <!-- other -->
+<script src="scripts/ui-bootstrap-tpls-0.6.0.js"></script>
 <script src="scripts/bootstrap.js"></script>
 <script src="scripts/toastr.js"></script>
 <script src="scripts/moment.js"></script>
@@ -138,6 +141,9 @@
 <script src="app/common/common.js"></script>
 <script src="app/common/logger.js"></script>
 <script src="app/common/spinner.js"></script>
+<script src="app/common/app.settings.ser.js"></script>
+<script src="app/common/user.account.ser.js"></script>
+<script src="app/common/current.user.ser.js"></script>
 
 <!-- common.bootstrap Modules -->
 <script src="app/common/bootstrap/bootstrap.dialog.js"></script>

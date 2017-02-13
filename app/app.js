@@ -6,6 +6,7 @@
         'ngAnimate',        // animations
         'ngRoute',          // routing
         'ngSanitize',       // sanitizes html bindings (ex: sidebar.js)
+        'ngResource',       // for the ASP.NET Web API backend
 
         // Custom modules 
         'common',           // common functions, logger, spinner

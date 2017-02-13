@@ -1,7 +1,7 @@
 /**
  * Created by Julius Alvarado on 2/4/2017.
  */
-(function(){
+(function () {
     "use strict";
 
     // Controller name is handy for logging
@@ -14,7 +14,8 @@
         ['common', 'datacontext', SessionsClass]);
 
     function SessionsClass(common, datacontext) {
-        // Using 'Controller As' syntax, so we assign this to the vm variable (for viewmodel).
+        // Using 'Controller As' syntax, so we assign this to the vm
+        // variable (for view model)
         var vm = this;
         var getLogFn = common.logger.getLogFn;
         var log = getLogFn(controllerId);
@@ -23,13 +24,15 @@
         vm.sessions = [];
         vm.title = 'Application Manager';
         vm.refresh = refresh;
-        
+
         activate();
 
         //#region internal and utility methods
         function activate() {
             common.activateController([getSessions()], controllerId)
-                .then(function () { log('Activated Sessions View'); });
+                .then(function () {
+                    log('Activated Sessions View');
+                });
         }
 
         function getSessions(forceRefresh) {
@@ -37,7 +40,7 @@
                 return vm.sessions = data;
             });
         }
-        
+
         function refresh() {
             getSessions(true);
         }
