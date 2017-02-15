@@ -16,14 +16,14 @@
 
         return {
             // jUserAccount.register.user()
-            register: $resource(jAppSettings.cloudPath + 'api/Account/Register', null,
+            register: $resource(jAppSettings.cloudPath + '/api/Account/Register', null,
                 {
                     'registerUser': {
                         method: 'POST'
                     }
                 }
             ),
-            login: $resource(jAppSettings.cloudPath + 'Token', null,
+            login: $resource(jAppSettings.cloudPath + '/Token', null,
                 {
                     'loginUser': {
                         method: 'POST',
@@ -33,6 +33,7 @@
                             console.log(jAppSettings.cloudPath + 'Token');
                             console.log(data);
                             for (var d in data) {
+                              console.log(d+"="+data[d]);
                                 str.push(encodeURIComponent(d) + "=" + encodeURIComponent(data[d]));
                             }
                             return str.join('&');

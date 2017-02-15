@@ -38,8 +38,18 @@
                 vm.userData.get_username = function() {
                     return jCurrentUser.getProfile().username;
                 }
-            }, function(err){
-                vm.loginError = "There has been a login error: \n"+err;
+            }, function(err) {
+                vm.loginError = 'There has been a login error: \n'+err.statusText;
+                var errProps = "";
+                for(var prop in errProps) errProps += (' - ' + prop);
+                console.log('errProps = ' + errProps);
+                if(err.data.exceptionMessage) {
+                  vm.loginError += " " + err.data.exceptionMessage;
+                }
+
+                if(err.data.error) {
+                  vm.loginError += " " + err.data.error;
+                }
             });
         };
 
