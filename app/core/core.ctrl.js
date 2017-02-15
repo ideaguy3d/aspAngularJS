@@ -16,6 +16,7 @@
 
         vm.coreCtrlMessage = 'This is the Core Class Ctrl';
         vm.loginError = '';
+        vm.authIsLoading = false;
         vm.ccIsLoggedIn = function () {
             return jCurrentUser.getProfile().isLoggedin;
         };
@@ -27,10 +28,12 @@
         };
 
         vm.ccLoginFn = function () {
+            vm.authIsLoading = true;
             vm.userData.grant_type = 'password';
             vm.userData.username = vm.userData.email;
 
             jUserAccount.login.loginUser(vm.userData, function (data) {
+                vm.authIsLoading = false;
                 console.log(data);
                 vm.userData.password = '';
                 vm.loginError = '';
@@ -39,6 +42,7 @@
                     return jCurrentUser.getProfile().username;
                 }
             }, function (err) {
+                vm.authIsLoading = false;
                 vm.loginError = 'There has been a login error: \n' + err.statusText;
                 var errProps = "";
                 for (var prop in err) errProps += (' - ' + prop);
@@ -61,13 +65,16 @@
         };
 
         vm.ccRegisterFn = function () {
+            vm.authIsLoading = true;
             vm.userData.confirmPassword = vm.userData.password;
-
+            console.log("The register button was pressed, now to make the request...");
             jUserAccount.register.registerUser(vm.userData, function(data){
+                vm.authIsLoading = false;
                 vm.userData.confirmPassword = "";
-                vm.loginError = "Registration success. No errors."
+                vm.loginError = "Registration success. No errors.";
                 vm.ccLoginFn();
             }, function(err){
+                vm.authIsLoading = false;
                 vm.loginError = "response.statusText = " + err.statusText;
                 if(err.data.exceptionMessage) {
                     vm.loginError += " - exception message: " + err.data.exceptionMessage;

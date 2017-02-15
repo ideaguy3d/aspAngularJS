@@ -86,13 +86,20 @@
 
     <div class="col-xs-12" style="padding-top:15px;">
         <div class="row">
+            <!-- loading gif area: -->
+            <section ng-if="coreCtrl.authIsLoading">
+                <p>Loading your custom experience...</p>
+                <img src="/Images/pie.gif" alt="loading">
+            </section>
+
             <h2 ng-if="coreCtrl.loginError">{{ coreCtrl.loginError }}</h2>
             <p>
                 Please enter your username and password. If you don't have a username and password, please contact your
                 school district's Williams Coordinator.
             </p>
+            <!-- quick way to track amount of attempts: -->
             <p>
-                <small>8th attempt at auth ~JuliusA, 2-15-17@8:50am</small>
+                <small>9th attempt at auth ~JuliusA, 2-15-17@10:42am</small>
             </p>
         </div>
     </div>
