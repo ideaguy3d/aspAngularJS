@@ -10,7 +10,7 @@
         serviceId = 'jAppSettings';
 
     app.constant(serviceId, {
-            cloudPath: 'http://wa-cedr.azurewebsites.net', //https://api.williamsact.org
+            cloudPath: 'http://wa-cedr.azurewebsites.net', // https://api.williamsact.org
             localPath: 'http://localhost:51624'
         }
     )

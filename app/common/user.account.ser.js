@@ -15,7 +15,7 @@
         vm.userAccountMessage = 'User Account Service wired up (:';
 
         return {
-            // jUserAccount.register.user()
+            // jUserAccount.register.registerUser()
             register: $resource(jAppSettings.cloudPath + '/api/Account/Register', null,
                 {
                     'registerUser': {
